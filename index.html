@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy 3-Month Anniversary Vasilakooo</title>
+
+<style>
+:root{
+  --purple:#7b4dff;
+  --purple2:#c4a7ff;
+  --blue:#0b4cff;
+  --blue2:#77b7ff;
+  --brown:#7a4b32;
+  --brown2:#d29b72;
+  --cream:#fff0c9;
+  --pink:#ff7ac8;
+  --white:#fffaf4;
+  --dark:#050414;
+  --glass:rgba(255,255,255,.13);
+  --glass2:rgba(255,255,255,.2);
+  --line:rgba(255,255,255,.28);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html,body{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  color:white;
+}
+
+body{
+  touch-action:manipulation;
+}
+
+#bgVideo{
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:-20;
+  filter:brightness(.62) contrast(1.08) saturate(1.35);
+}
+
+.videoTint{
+  position:fixed;
+  inset:0;
+  z-index:-19;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(196,167,255,.55), transparent 34%),
+    radial-gradient(circle at 78% 20%, rgba(119,183,255,.48), transparent 32%),
+    radial-gradient(circle at 80% 82%, rgba(210,155,114,.45), transparent 36%),
+    linear-gradient(135deg, rgba(5,4,20,.7), rgba(5,4,20,.18), rgba(5,4,20,.72));
+  animation:softMove 14s ease-in-out infinite alternate;
+}
+
+.vignette{
+  position:fixed;
+  inset:0;
+  z-index:-18;
+  background:radial-gradient(circle, transparent 34%, rgba(0,0,0,.72) 100%);
+}
+
+.sparkleLayer{
+  position:fixed;
+  inset:0;
+  z-index:-17;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+.sparkleLayer span{
+  position:absolute;
+  width:4px;
+  height:4px;
+  border-radius:50%;
+  background:white;
+  opacity:.65;
+  animation:twinkle 4s ease-in-out infinite;
+}
+
+@keyframes softMove{
+  from{
+    transform:scale(1) translate(-2%,1%) rotate(0deg);
+  }
+  to{
+    transform:scale(1.08) translate(2%,-1%) rotate(5deg);
+  }
+}
+
+@keyframes twinkle{
+  0%,100%{opacity:.1;transform:scale(.5);}
+  50%{opacity:.8;transform:scale(1.4);}
+}
+
+
+.app{
+  width:100vw;
+  height:100vh;
+  position:relative;
+}
+
+.screen{
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  padding:26px;
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(28px) scale(.96);
+  filter:blur(18px);
+  transition:
+    opacity .75s ease,
+    transform .85s cubic-bezier(.18,.9,.22,1),
+    filter .75s ease;
+}
+
+.screen.active{
+  opacity:1;
+  pointer-events:auto;
+  transform:translateY(0) scale(1);
+  filter:blur(0);
+}
+
+.panel{
+  position:relative;
+    width:min(1180px,88vw);
+    height:min(900px,90vh);
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+  overflow:hidden;
+  border-radius:44px;
+  border:1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(123,77,255,.26), rgba(11,76,255,.18), rgba(122,75,50,.22)),
+    rgba(255,255,255,.11);
+  backdrop-filter:blur(24px);
+  -webkit-backdrop-filter:blur(24px);
+  box-shadow:
+    0 30px 120px rgba(0,0,0,.45),
+    inset 0 0 70px rgba(255,255,255,.07);
+  padding:clamp(24px,5vw,68px);
+  padding-bottom:80px;
+}
+.panel::-webkit-scrollbar{
+    width:8px;
+}
+
+.panel::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+.panel::-webkit-scrollbar-thumb{
+    background:rgba(255,255,255,.25);
+    border-radius:20px;
+}
+
+.panel::-webkit-scrollbar-thumb:hover{
+    background:rgba(255,255,255,.45);
+}
+
+.panel::before{
+  content:"";
+  position:absolute;
+  inset:-30%;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,.16), transparent 30%),
+    radial-gradient(circle at 80% 70%, rgba(255,240,201,.12), transparent 32%);
+  pointer-events:none;
+}
+
+.panel::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(110deg, transparent 0%, rgba(255,255,255,.14) 38%, transparent 58%);
+  transform:translateX(-120%);
+  animation:shine 7s ease-in-out infinite;
+  pointer-events:none;
+}
+
+@keyframes shine{
+  0%,45%{transform:translateX(-120%);}
+  75%,100%{transform:translateX(120%);}
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.kicker{
+  color:var(--cream);
+  font-size:.78rem;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  font-weight:800;
+  margin-bottom:18px;
+font-size:.7rem;
+}
+
+h1{
+  font-size:clamp(3rem,9vw,8.2rem);
+  line-height:.88;
+  letter-spacing:-.08em;
+  font-weight:950;
+}
+
+h2{
+    font-size:clamp(1.9rem,3.8vw,3.8rem);
+    text-transform:uppercase;
+  line-height:.9;
+  letter-spacing:-.07em;
+  font-weight:950;
+  margin-bottom:22px;
+}
+
+.gradientText{
+  background:linear-gradient(90deg,#fff,var(--purple2),var(--blue2),var(--cream),#fff);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.text{
+  max-width:780px;
+  font-size:clamp(1rem,2vw,1.35rem);
+  line-height:1.65;
+  color:rgba(255,255,255,.82);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.mainBtn,
+.choiceBtn,
+.navBtn{
+  border:1px solid rgba(255,255,255,.32);
+  color:white;
+  cursor:pointer;
+  font-weight:900;
+  transition:.25s ease;
+}
+
+.mainBtn{
+  margin-top:30px;
+  padding:17px 34px;
+  border-radius:999px;
+  letter-spacing:.16em;
+  background:linear-gradient(135deg, rgba(123,77,255,.95), rgba(11,76,255,.82), rgba(210,155,114,.78));
+  box-shadow:0 18px 55px rgba(123,77,255,.35);
+}
+
+.mainBtn:hover,
+.choiceBtn:hover,
+.navBtn:hover{
+  transform:translateY(-3px) scale(1.03);
+  box-shadow:0 25px 75px rgba(123,77,255,.45);
+}
+
+.soundBtn{
+  position:fixed;
+  top:18px;
+  right:18px;
+  z-index:80;
+  border:1px solid rgba(255,255,255,.28);
+  background:rgba(255,255,255,.13);
+  backdrop-filter:blur(18px);
+  color:white;
+  border-radius:999px;
+  padding:12px 17px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.controls{
+  position:fixed;
+  left:50%;
+  bottom:18px;
+  transform:translateX(-50%);
+  z-index:80;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.24);
+  background:rgba(255,255,255,.12);
+  backdrop-filter:blur(18px);
+  box-shadow:0 15px 45px rgba(0,0,0,.28);
+  opacity:0;
+  pointer-events:none;
+  transition:.4s ease;
+}
+
+.controls.visible{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.navBtn{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:rgba(255,255,255,.14);
+  font-size:20px;
+}
+
+.counter{
+  min-width:86px;
+  text-align:center;
+  color:var(--cream);
+  font-size:.78rem;
+  letter-spacing:.18em;
+  font-weight:900;
+}
+/* =========================
+   INTRO
+========================= */
+
+.introPanel{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.introPanel h1{
+  margin-bottom:24px;
+}
+
+.introPanel .text{
+  margin:auto;
+}
+
+/* =========================
+   SINGLE MEMORY PAGE
+========================= */
+
+.singleMemory{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:38px;
+  align-items:center;
+  height:100%;
+}
+
+.memoryPhotoWrap{
+  position:relative;
+  height:100%;
+  min-height:520px;
+  border-radius:38px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.26);
+  box-shadow:0 25px 80px rgba(0,0,0,.35);
+}
+
+.memoryPhotoWrap img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  animation:slowZoom 9s ease-in-out infinite alternate;
+}
+
+.memoryPhotoWrap::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top, rgba(0,0,0,.55), transparent 55%);
+}
+
+.memoryBadge{
+  position:absolute;
+  left:20px;
+  bottom:20px;
+  right:20px;
+  z-index:2;
+  padding:18px 20px;
+  border-radius:24px;
+  background:rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.26);
+  backdrop-filter:blur(18px);
+  font-size:clamp(1rem,2vw,1.35rem);
+  line-height:1.4;
+  font-weight:800;
+}
+
+.memoryText{
+  position:relative;
+  z-index:3;
+}
+
+.memoryNumber{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 15px;
+  border-radius:999px;
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.23);
+  color:var(--cream);
+  font-size:.78rem;
+  letter-spacing:.18em;
+  font-weight:900;
+  margin-bottom:22px;
+}
+
+@keyframes slowZoom{
+  from{transform:scale(1);}
+  to{transform:scale(1.08);}
+}
+
+/* =========================
+   TWO PHOTOS PAGE
+========================= */
+
+.twoPhotos{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  margin-top:28px;
+}
+
+.photoCard{
+  position:relative;
+  min-height:460px;
+  overflow:hidden;
+  border-radius:34px;
+  border:1px solid rgba(255,255,255,.25);
+  background:rgba(255,255,255,.12);
+  box-shadow:0 20px 70px rgba(0,0,0,.3);
+}
+
+.photoCard img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.7s ease;
+}
+
+.photoCard:hover img{
+  transform:scale(1.08);
+}
+
+.photoCard .photoLabel{
+  position:absolute;
+  left:18px;
+  right:18px;
+  bottom:18px;
+  padding:15px 17px;
+  border-radius:22px;
+  background:rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.25);
+  backdrop-filter:blur(16px);
+  font-weight:800;
+}
+
+/* =========================
+   HAPPY CARD PAGE
+========================= */
+
+.happyCard{
+  height:100%;
+  display:grid;
+  place-items:center;
+  text-align:center;
+}
+
+.bigEmoji{
+  font-size:clamp(4rem,12vw,10rem);
+  line-height:1;
+  margin-bottom:10px;
+  filter:drop-shadow(0 20px 35px rgba(0,0,0,.28));
+  animation:bounceSoft 2.8s ease-in-out infinite;
+}
+
+@keyframes bounceSoft{
+  0%,100%{transform:translateY(0) rotate(-2deg);}
+  50%{transform:translateY(-12px) rotate(2deg);}
+}
+
+.miniCards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin-top:32px;
+  width:100%;
+}
+
+.miniCard{
+  padding:22px;
+  border-radius:28px;
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.24);
+  backdrop-filter:blur(16px);
+  box-shadow:0 18px 50px rgba(0,0,0,.22);
+}
+
+.miniCard strong{
+  display:block;
+  color:var(--cream);
+  font-size:1.7rem;
+  margin-bottom:8px;
+}
+
+.miniCard span{
+  color:rgba(255,255,255,.78);
+  line-height:1.5;
+}
+
+/* =========================
+   TRAVEL / DATE PAGE
+========================= */
+
+.travelLayout{
+  height:100%;
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:38px;
+  align-items:center;
+}
+
+.travelStack{
+  position:relative;
+  height:620px;
+}
+
+.travelStack img{
+  position:absolute;
+  width:48%;
+  height:52%;
+  object-fit:cover;
+  border-radius:34px;
+  border:1px solid rgba(255,255,255,.26);
+  box-shadow:0 24px 80px rgba(0,0,0,.35);
+  transition:.45s ease;
+}
+
+.travelStack img:hover{
+  transform:scale(1.06) rotate(0deg)!important;
+  z-index:10;
+}
+
+.travelStack img:nth-child(1){
+  left:2%;
+  top:4%;
+  transform:rotate(-7deg);
+}
+
+.travelStack img:nth-child(2){
+  right:3%;
+  top:18%;
+  transform:rotate(5deg);
+}
+
+.travelStack img:nth-child(3){
+  left:27%;
+  bottom:3%;
+  transform:rotate(-2deg);
+}
+
+.messageStack{
+  display:grid;
+  gap:15px;
+  margin-top:26px;
+}
+
+.messageBubble{
+  padding:20px 22px;
+  border-radius:26px;
+  background:
+    linear-gradient(135deg, rgba(123,77,255,.32), rgba(119,183,255,.18), rgba(210,155,114,.18));
+  border:1px solid rgba(255,255,255,.24);
+  backdrop-filter:blur(18px);
+  box-shadow:0 16px 45px rgba(0,0,0,.22);
+  font-size:clamp(1rem,2vw,1.35rem);
+  line-height:1.45;
+  font-weight:750;
+}
+
+/* =========================
+   GALLERY STRIP
+========================= */
+
+.galleryStage{
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.galleryStrip{
+  display:flex;
+  gap:16px;
+  margin-top:28px;
+  height:470px;
+}
+
+.galleryItem{
+  position:relative;
+  flex:1;
+  min-width:0;
+  border-radius:30px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.25);
+  box-shadow:0 20px 65px rgba(0,0,0,.28);
+  transition:.55s cubic-bezier(.18,.9,.22,1);
+}
+
+.galleryItem:hover{
+  flex:2.4;
+}
+
+.galleryItem img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.galleryItem::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top, rgba(0,0,0,.5), transparent 55%);
+}
+
+/* =========================
+   MOBILE PART 2
+========================= */
+
+@media(max-width:800px){
+
+  .panel{
+    width:94vw;
+    height:84vh;
+    border-radius:30px;
+    padding:22px;
+  }
+
+  .screen{
+    padding:13px;
+  }
+
+  .soundBtn{
+    top:12px;
+    right:12px;
+    padding:10px 13px;
+    font-size:.76rem;
+  }
+
+  .controls{
+    bottom:12px;
+  }
+
+  .navBtn{
+    width:42px;
+    height:42px;
+  }
+
+  .counter{
+    min-width:78px;
+    font-size:.72rem;
+  }
+
+  h1{
+    font-size:clamp(3rem,17vw,5rem);
+  }
+
+  h2{
+    font-size:clamp(2.4rem,13vw,4.3rem);
+  }
+
+  .text{
+    font-size:1rem;
+  }
+
+  .singleMemory,
+  .travelLayout{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .memoryPhotoWrap{
+    min-height:46vh;
+    border-radius:26px;
+  }
+
+  .memoryBadge{
+    font-size:.95rem;
+    padding:13px 15px;
+    border-radius:18px;
+  }
+
+  .twoPhotos{
+    grid-template-columns:1fr;
+    gap:12px;
+    margin-top:18px;
+  }
+
+  .photoCard{
+    min-height:26vh;
+    border-radius:24px;
+  }
+
+  .miniCards{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+
+  .miniCard{
+    padding:16px;
+    border-radius:22px;
+  }
+
+  .travelStack{
+    height:380px;
+  }
+
+  .travelStack img{
+    width:58%;
+    height:48%;
+    border-radius:24px;
+  }
+
+  .travelStack img:nth-child(1){
+    left:0;
+    top:0;
+  }
+
+  .travelStack img:nth-child(2){
+    right:0;
+    top:80px;
+  }
+
+  .travelStack img:nth-child(3){
+    left:22%;
+    bottom:0;
+  }
+
+  .messageBubble{
+    padding:15px 16px;
+    border-radius:20px;
+    font-size:1rem;
+  }
+
+  .galleryStrip{
+    height:52vh;
+    gap:10px;
+  }
+
+  .galleryItem{
+    min-width:30%;
+    border-radius:22px;
+  }
+
+  .galleryItem:hover{
+    flex:1.8;
+  }
+}
+/* =========================
+   FUN / CAPYBARA SECTION
+========================= */
+
+.funLayout{
+  height:100%;
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:34px;
+  align-items:center;
+}
+
+.funCards{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+.funCard{
+  position:relative;
+  min-height:300px;
+  overflow:hidden;
+  border-radius:34px;
+  border:1px solid rgba(255,255,255,.25);
+  background:rgba(255,255,255,.12);
+  box-shadow:0 22px 70px rgba(0,0,0,.28);
+}
+
+.funCard img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.funCard.wide{
+  grid-column:1/3;
+  min-height:240px;
+}
+
+.funLabel{
+  position:absolute;
+  left:16px;
+  right:16px;
+  bottom:16px;
+  padding:14px 16px;
+  border-radius:20px;
+  background:rgba(255,255,255,.17);
+  border:1px solid rgba(255,255,255,.26);
+  backdrop-filter:blur(16px);
+  font-weight:900;
+}
+
+/* =========================
+   QUIZ
+========================= */
+
+.quizBox{
+  margin-top:28px;
+  padding:24px;
+  border-radius:32px;
+  background:rgba(255,255,255,.13);
+  border:1px solid rgba(255,255,255,.25);
+  backdrop-filter:blur(18px);
+}
+
+.quizQuestion{
+  font-size:clamp(1.4rem,3vw,2.6rem);
+  line-height:1.1;
+  font-weight:950;
+  margin-bottom:18px;
+}
+
+.quizChoices{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.choiceBtn{
+  padding:16px 18px;
+  border-radius:22px;
+  background:linear-gradient(135deg,rgba(123,77,255,.55),rgba(11,76,255,.36),rgba(210,155,114,.3));
+  font-size:1rem;
+}
+
+.quizResult{
+  margin-top:16px;
+  min-height:34px;
+  font-size:1.15rem;
+  font-weight:900;
+  color:var(--cream);
+}
+
+/* =========================
+   COMMENT PHOTOS
+========================= */
+
+.commentWall{
+  height:100%;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:14px;
+  align-items:center;
+}
+
+.commentShot{
+  position:relative;
+  height:560px;
+  overflow:hidden;
+  border-radius:28px;
+  border:1px solid rgba(255,255,255,.25);
+  box-shadow:0 22px 70px rgba(0,0,0,.3);
+  transform:rotate(var(--r));
+  transition:.45s ease;
+}
+
+.commentShot:hover{
+  transform:rotate(0deg) scale(1.05);
+  z-index:10;
+}
+
+.commentShot img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* =========================
+   LOVE LETTER
+========================= */
+
+.letterPanel{
+  display:grid;
+  place-items:center;
+  text-align:center;
+}
+
+.letterStage{
+  width:100%;
+  height:100%;
+  display:grid;
+  place-items:center;
+}
+
+.letterLine{
+  display:none;
+  max-width:950px;
+  font-size:clamp(2.2rem,5.5vw,6.2rem);
+  line-height:1.02;
+  letter-spacing:-.07em;
+  font-weight:950;
+  background:linear-gradient(90deg,#fff,var(--purple2),var(--blue2),var(--cream));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.letterLine.active{
+  display:block;
+  animation:letterIn .8s ease both;
+}
+
+@keyframes letterIn{
+  from{
+    opacity:0;
+    transform:translateY(34px) scale(.96);
+    filter:blur(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0) scale(1);
+    filter:blur(0);
+  }
+}
+
+.letterMini{
+  position:absolute;
+  left:50%;
+  bottom:34px;
+  transform:translateX(-50%);
+  color:rgba(255,255,255,.68);
+  font-size:.78rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  font-weight:900;
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.finalPanel{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.finalPhoto{
+  width:min(360px,70vw);
+  height:min(360px,70vw);
+  object-fit:cover;
+  border-radius:46px;
+  border:1px solid rgba(255,255,255,.28);
+  box-shadow:
+    0 25px 80px rgba(0,0,0,.35),
+    0 0 70px rgba(196,167,255,.35);
+  margin-bottom:24px;
+}
+
+.finalTitle{
+  font-size:clamp(4rem,12vw,11rem);
+  line-height:.85;
+  letter-spacing:-.09em;
+  font-weight:950;
+  margin-bottom:20px;
+}
+
+.finalText{
+  max-width:740px;
+  font-size:clamp(1rem,2vw,1.3rem);
+  line-height:1.6;
+  color:rgba(255,255,255,.82);
+}
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.floatHeart{
+  position:fixed;
+  z-index:100;
+  pointer-events:none;
+  font-size:18px;
+  animation:heartUp 1.6s ease forwards;
+}
+
+@keyframes heartUp{
+  from{
+    opacity:1;
+    transform:translateY(0) scale(.8) rotate(0deg);
+  }
+  to{
+    opacity:0;
+    transform:translateY(-100px) scale(1.6) rotate(20deg);
+  }
+}
+
+/* =========================
+   MOBILE PART 3
+========================= */
+
+@media(max-width:800px){
+
+  .funLayout{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .funCards{
+    gap:10px;
+  }
+
+  .funCard{
+    min-height:170px;
+    border-radius:22px;
+  }
+
+  .funCard.wide{
+    min-height:140px;
+  }
+
+  .funLabel{
+    padding:11px 12px;
+    border-radius:16px;
+    font-size:.86rem;
+  }
+
+  .quizBox{
+    padding:16px;
+    border-radius:24px;
+    margin-top:18px;
+  }
+
+  .quizQuestion{
+    font-size:1.45rem;
+  }
+
+  .quizChoices{
+    grid-template-columns:1fr;
+  }
+
+  .choiceBtn{
+    padding:13px 14px;
+    border-radius:18px;
+  }
+
+  .commentWall{
+    grid-template-columns:repeat(5,70%);
+    overflow:hidden;
+    gap:10px;
+  }
+
+  .commentShot{
+    height:56vh;
+    border-radius:22px;
+  }
+
+  .letterLine{
+    font-size:clamp(2.2rem,12vw,4.2rem);
+  }
+
+  .letterMini{
+    bottom:24px;
+    font-size:.68rem;
+  }
+
+  .finalTitle{
+    font-size:clamp(4rem,18vw,6.4rem);
+  }
+}
+
+</style>
+</head>
+<body>
+
+<video id="bgVideo" playsinline loop>
+  <source src="Video.mp4" type="video/mp4">
+</video>
+
+<div class="videoTint"></div>
+<div class="vignette"></div>
+
+<div class="sparkleLayer" id="sparkleLayer">
+  <span style="left:8%; top:14%; animation-delay:.1s;"></span>
+  <span style="left:18%; top:72%; animation-delay:1.1s;"></span>
+  <span style="left:31%; top:28%; animation-delay:2s;"></span>
+  <span style="left:44%; top:82%; animation-delay:.7s;"></span>
+  <span style="left:58%; top:18%; animation-delay:1.8s;"></span>
+  <span style="left:67%; top:62%; animation-delay:.4s;"></span>
+  <span style="left:79%; top:34%; animation-delay:2.5s;"></span>
+  <span style="left:91%; top:76%; animation-delay:1.4s;"></span>
+</div>
+
+<button class="soundBtn" id="soundBtn">Sound ON 🔊</button>
+
+<main class="app">
+
+  <!-- INTRO -->
+  <section class="screen active">
+    <div class="panel introPanel">
+      <div class="kicker">A tiny movie about us</div>
+
+      <h1>
+        Happy 3-Month<br>
+        <span class="gradientText">Vasilakooo </span>
+      </h1>
+
+      <p class="text">
+        Are you ready to watch some of our favorite memories together?
+      </p>
+
+      <button class="mainBtn" id="enterBtn">ENTER ❤️</button>
+    </div>
+  </section>
+
+  <!-- FIRST DATE -->
+  <section class="screen">
+    <div class="panel">
+      <div class="singleMemory">
+        <div class="memoryPhotoWrap">
+          <img src="739552943_1708643250475179_2312160686438021247_n.jpg" alt="">
+          <div class="memoryBadge">
+            On our way to our first date 🥹❤️
+          </div>
+        </div>
+
+        <div class="memoryText">
+          <div class="memoryNumber">01 / FIRST DATE</div>
+          <h2 class="gradientText">This is where my favorite story started.</h2>
+          <p class="text">
+            I still think about the beginning — how simple it was, how sweet it felt,
+            and how quickly you became someone so important to me.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENCH -->
+  <section class="screen">
+    <div class="panel">
+      <div class="singleMemory">
+        <div class="memoryText">
+          <div class="memoryNumber">02 / SEVEN HOURS</div>
+          <h2 class="gradientText">Our first 7-hour date.</h2>
+          <p class="text">
+            Sitting on the bench during our first 7-hour date.
+            I secretly took this picture haha.
+          </p>
+        </div>
+
+        <div class="memoryPhotoWrap">
+          <img src="739155588_1003111225871392_3300147627175431856_n.jpg" alt="">
+          <div class="memoryBadge">
+            7 hours and somehow it still wasn’t enough.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIRST PHOTO TOGETHER -->
+  <section class="screen">
+    <div class="panel">
+      <div class="singleMemory">
+        <div class="memoryPhotoWrap">
+          <img src="738464899_1224344517426339_649778286741024328_n.jpg" alt="">
+          <div class="memoryBadge">
+            One of our very first photos together.
+          </div>
+        </div>
+
+        <div class="memoryText">
+          <div class="memoryNumber">03 / FIRST PHOTOS</div>
+          <h2 class="gradientText">One of the first moments I wanted to keep forever.</h2>
+          <p class="text">
+            It is funny how one picture can hold so much.
+            A smile, a feeling, a beginning.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HAPPY MINI FACTS -->
+  <section class="screen">
+    <div class="panel happyCard">
+      <div>
+        <div class="bigEmoji">🥹💜</div>
+        <div class="kicker">Tiny facts about us</div>
+
+        <h2 class="gradientText">Three months, but already so many memories.</h2>
+
+        <div class="miniCards">
+          <div class="miniCard">
+            <strong>7h</strong>
+            <span>Our first date lasted almost forever.</span>
+          </div>
+
+          <div class="miniCard">
+            <strong>∞</strong>
+            <span>Things I still want to do with you.</span>
+          </div>
+
+          <div class="miniCard">
+            <strong>1</strong>
+            <span>Favorite person. You.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- DATE MOMENTS -->
+  <section class="screen">
+    <div class="panel">
+      <div class="travelLayout">
+        <div>
+          <div class="memoryNumber">04 / DATES</div>
+          <h2 class="gradientText">Every date with you became special.</h2>
+          <p class="text">
+            Cocktails, walks, random photos, little conversations, and moments that felt
+            simple but meant everything.
+          </p>
+
+          <div class="messageStack">
+            <div class="messageBubble">Our second amazing date, enjoying cocktails in Athens.</div>
+            <div class="messageBubble">One of our favorite dates at Praggi.</div>
+            <div class="messageBubble">The kind of nights I wish I could replay.</div>
+          </div>
+        </div>
+
+        <div class="travelStack">
+          <img src="736095222_1021064414118823_2262635321678746641_n.jpg" alt="">
+          <img src="740711998_28020358334248752_8334059859582005943_n.jpg" alt="">
+          <img src="738472700_28153022357615820_864634999217654805_n.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THESSALONIKI / TRAVEL -->
+  <section class="screen">
+    <div class="panel">
+      <div class="singleMemory">
+        <div class="memoryPhotoWrap">
+          <img src="738158151_1584937849817123_3055034542859595745_n.jpg" alt="">
+          <div class="memoryBadge">
+            Our first time traveling to Thessaloniki together.
+          </div>
+        </div>
+
+        <div class="memoryText">
+          <div class="memoryNumber">05 / FIRST TRIP</div>
+          <h2 class="gradientText">I love discovering places with you.</h2>
+          <p class="text">
+            Not because of the place only, but because everything feels better
+            when I get to experience it with you.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY STRIP -->
+  <section class="screen">
+    <div class="panel galleryStage">
+      <div class="memoryNumber">06 / RANDOM BEAUTIFUL MOMENTS</div>
+      <h2 class="gradientText">A few little pieces of us.</h2>
+      <p class="text">
+        Some pictures are just pictures. These ones are tiny pieces of my happiness.
+      </p>
+
+      <div class="galleryStrip">
+        <div class="galleryItem">
+          <img src="739835424_2310283096467381_5350535590234375789_n.jpg" alt="">
+        </div>
+
+        <div class="galleryItem">
+          <img src="738916235_1042685471514438_856877962250109548_n.jpg" alt="">
+        </div>
+
+        <div class="galleryItem">
+          <img src="740183499_2614584608999631_6208220092572855254_n.jpg" alt="">
+        </div>
+
+        <div class="galleryItem">
+          <img src="740917273_978568518514929_6659274502936660721_n.jpg" alt="">
+        </div>
+
+        <div class="galleryItem">
+          <img src="736260556_1310995760800680_846379515595356384_n.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TWO PHOTO MEMORY -->
+  <section class="screen">
+    <div class="panel">
+      <div class="memoryNumber">07 / US</div>
+      <h2 class="gradientText">You make normal moments feel like something magic.</h2>
+
+      <div class="twoPhotos">
+        <div class="photoCard">
+          <img src="738916234_1774571497054243_1190620968029493836_n.jpg" alt="">
+          <div class="photoLabel">A little memory I love.</div>
+        </div>
+
+        <div class="photoCard">
+          <img src="736759860_2045074312785755_8233802373036688040_n.jpg" alt="">
+          <div class="photoLabel">Another moment with you that makes me smile.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MORE MEMORIES -->
+  <section class="screen">
+    <div class="panel">
+      <div class="travelLayout">
+        <div>
+          <div class="memoryNumber">08 / MORE OF US</div>
+          <h2 class="gradientText">I would choose this again and again.</h2>
+          <p class="text">
+            Every laugh, every silly photo, every small adventure.
+            I love how easy it feels to be happy with you.
+          </p>
+
+          <div class="messageStack">
+            <div class="messageBubble">You became my safe place.</div>
+            <div class="messageBubble">My favorite notification.</div>
+            <div class="messageBubble">My favorite person.</div>
+          </div>
+        </div>
+
+        <div class="travelStack">
+          <img src="735210631_2550136558790452_5818887730353599153_n.jpg" alt="">
+          <img src="738691219_2583423832087430_407447455019499686_n.jpg" alt="">
+          <img src="IMG_3701.jpeg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- MORE MEMORIES -->
+  <section class="screen">
+    <div class="panel">
+      <div class="memoryNumber">08 / MORE OF US</div>
+      <h2 class="gradientText">The kind of memories I want to replay.</h2>
+      <p class="text">
+        Different days, different places, same feeling: I am happy when I am with you.
+      </p>
+
+      <div class="twoPhotos">
+        <div class="photoCard">
+          <img src="735210631_2550136558790452_5818887730353599153_n.jpg" alt="">
+          <div class="photoLabel">A tiny moment. A huge smile.</div>
+        </div>
+
+        <div class="photoCard">
+          <img src="738691219_2583423832087430_407447455019499686_n.jpg" alt="">
+          <div class="photoLabel">Another favorite.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNNY CAPYBARA -->
+  <section class="screen">
+    <div class="panel">
+      <div class="funLayout">
+        <div>
+          <div class="memoryNumber">09 / OUR ENERGY</div>
+          <h2 class="gradientText">Because you call me Capybara.</h2>
+          <p class="text">
+            Some couples have romantic inside jokes.
+            We have capybara energy, Patrick and SpongeBob, and somehow it makes perfect sense.
+          </p>
+
+          <div class="quizBox">
+            <div class="quizQuestion">Who is the cutest capybara?</div>
+
+            <div class="quizChoices">
+              <button class="choiceBtn" data-answer="wrong">Me 😌</button>
+              <button class="choiceBtn" data-answer="right">You 😂</button>
+            </div>
+
+            <div class="quizResult" id="quizResult">
+              Choose carefully...
+            </div>
+          </div>
+        </div>
+
+        <div class="funCards">
+          <div class="funCard">
+            <img src="IMG_8017.jpeg" alt="">
+            <div class="funLabel">We are literally these two.</div>
+          </div>
+
+          <div class="funCard">
+            <img src="IMG_8014.jpeg" alt="">
+            <div class="funLabel">No explanation needed.</div>
+          </div>
+
+          <div class="funCard wide">
+            <img src="15D8B796-3FA4-4FA5-9707-71F2360D269F.png" alt="">
+            <div class="funLabel">Capybara mode forever 🫶</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMENT PHOTOS -->
+  <section class="screen">
+    <div class="panel">
+      <div class="memoryNumber">10 / LITTLE COMMENTS</div>
+      <h2 class="gradientText">The comments that became memories.</h2>
+      <p class="text">
+        I wanted to keep these too, because they are part of the story.
+      </p>
+
+      <div class="commentWall">
+        <div class="commentShot" style="--r:-5deg;">
+          <img src="IMG_2626.jpeg" alt="">
+        </div>
+
+        <div class="commentShot" style="--r:4deg;">
+          <img src="IMG_2625.jpeg" alt="">
+        </div>
+
+        <div class="commentShot" style="--r:-2deg;">
+          <img src="IMG_2624.jpeg" alt="">
+        </div>
+
+        <div class="commentShot" style="--r:5deg;">
+          <img src="IMG_2622.jpeg" alt="">
+        </div>
+
+        <div class="commentShot" style="--r:-4deg;">
+          <img src="IMG_2623.jpeg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- LOVE LETTER -->
+  <section class="screen">
+    <div class="panel letterPanel">
+
+      <div class="memoryNumber">
+        11 / FOR YOU ❤️
+      </div>
+
+      <div class="letterStage">
+
+        <div class="letterLine active">
+          Happy 3-Month Anniversary
+          <br>
+          Vasilakooo ❤️
+        </div>
+
+        <div class="letterLine">
+          These three months with you
+          have been the happiest
+          and most beautiful months
+          of my life.
+        </div>
+
+        <div class="letterLine">
+          Every single day,
+          I feel incredibly grateful
+          that I get to call you mine.
+        </div>
+
+        <div class="letterLine">
+          You have filled my life
+          with so much happiness,
+          laughter
+          and love.
+        </div>
+
+        <div class="letterLine">
+          You became
+          my safe place,
+          my favorite person,
+          and my favorite smile.
+        </div>
+
+        <div class="letterLine">
+          You are the most important
+          person in my life,
+          and I honestly can't imagine
+          my life without you anymore.
+        </div>
+
+        <div class="letterLine">
+          I promise
+          to keep loving you.
+        </div>
+
+        <div class="letterLine">
+          I promise
+          to keep choosing you.
+        </div>
+
+        <div class="letterLine">
+          I promise
+          to keep making you smile
+          every single day.
+        </div>
+
+        <div class="letterLine">
+          I love you
+          more than words
+          could ever express.
+        </div>
+
+      </div>
+
+      <div class="letterMini">
+        every few seconds another page appears...
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+  <!-- FINAL PAGE -->
+
+  <section class="screen">
+
+    <div class="panel finalPanel">
+
+      <img
+      class="finalPhoto"
+      src="15D8B796-3FA4-4FA5-9707-71F2360D269F.png"
+      alt="">
+
+      <div class="memoryNumber">
+        THE END
+      </div>
+
+      <h2 class="finalTitle gradientText">
+
+        I love you
+        <br>
+        Vasilakooo ❤️
+
+      </h2>
+
+      <p class="finalText">
+
+        Thank you for every date.
+
+        <br><br>
+
+        Thank you for every laugh.
+
+        <br><br>
+
+        Thank you for every trip.
+
+        <br><br>
+
+        Thank you for every memory.
+
+        <br><br>
+
+        Happy 3-Month Anniversary.
+
+        <br><br>
+
+        I can't wait
+        to create thousands more memories
+        together.
+
+      </p>
+
+      <button
+      class="mainBtn"
+      id="restartButton">
+
+      PLAY AGAIN ❤️
+
+      </button>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+
+
+
+<div
+class="controls"
+id="controls">
+
+<button
+class="navBtn"
+id="prevButton">
+
+←
+
+</button>
+
+<div
+class="counter"
+id="counter">
+
+01 / 12
+
+</div>
+
+<button
+class="navBtn"
+id="nextButton">
+
+→
+
+</button>
+
+</div>
+<script>
+const screens = [...document.querySelectorAll(".screen")];
+
+const video = document.getElementById("bgVideo");
+const enterBtn = document.getElementById("enterBtn");
+const soundBtn = document.getElementById("soundBtn");
+const controls = document.getElementById("controls");
+const counter = document.getElementById("counter");
+const nextButton = document.getElementById("nextButton");
+const prevButton = document.getElementById("prevButton");
+const restartButton = document.getElementById("restartButton");
+const quizButtons = [...document.querySelectorAll(".choiceBtn")];
+const quizResult = document.getElementById("quizResult");
+const letterLines = [...document.querySelectorAll(".letterLine")];
+
+let currentScreen = 0;
+let letterIndex = 0;
+let letterTimer = null;
+
+video.volume = 0.85;
+video.muted = false;
+
+function showScreen(index){
+  currentScreen = Math.max(0, Math.min(index, screens.length - 1));
+
+  screens.forEach((screen, i) => {
+    screen.classList.toggle("active", i === currentScreen);
+  });
+
+  counter.textContent =
+    String(currentScreen + 1).padStart(2, "0") +
+    " / " +
+    String(screens.length).padStart(2, "0");
+
+  if(currentScreen === 0){
+    controls.classList.remove("visible");
+  }else{
+    controls.classList.add("visible");
+  }
+
+  if(currentScreen === screens.length - 2){
+    startLetter();
+  }else{
+    stopLetter();
+  }
+
+  createHearts(6);
+}
+
+async function startVideo(){
+  try{
+    video.muted = false;
+    video.volume = 0.85;
+    await video.play();
+    soundBtn.textContent = "Sound ON 🔊";
+  }catch(error){
+    soundBtn.textContent = "Tap Sound 🔊";
+  }
+}
+
+function startLetter(){
+  stopLetter();
+
+  letterIndex = 0;
+
+  letterLines.forEach(line => {
+    line.classList.remove("active");
+  });
+
+  if(letterLines[0]){
+    letterLines[0].classList.add("active");
+  }
+
+  letterTimer = setInterval(() => {
+    letterLines.forEach(line => {
+      line.classList.remove("active");
+    });
+
+    letterIndex = (letterIndex + 1) % letterLines.length;
+
+    letterLines[letterIndex].classList.add("active");
+  }, 3600);
+}
+
+function stopLetter(){
+  if(letterTimer){
+    clearInterval(letterTimer);
+    letterTimer = null;
+  }
+}
+
+function createHearts(amount = 4){
+  for(let i = 0; i < amount; i++){
+    setTimeout(() => {
+      const heart = document.createElement("div");
+      heart.className = "floatHeart";
+
+      const symbols = ["❤️", "💜", "✨", "🫶", "🥹"];
+      heart.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.top = 70 + Math.random() * 22 + "vh";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 1600);
+    }, i * 120);
+  }
+}
+
+enterBtn.addEventListener("click", async () => {
+  await startVideo();
+  showScreen(1);
+});
+
+soundBtn.addEventListener("click", startVideo);
+
+nextButton.addEventListener("click", () => {
+  showScreen(currentScreen + 1);
+});
+
+prevButton.addEventListener("click", () => {
+  showScreen(currentScreen - 1);
+});
+
+restartButton.addEventListener("click", () => {
+  showScreen(0);
+});
+
+quizButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const answer = button.dataset.answer;
+
+    if(answer === "right"){
+      quizResult.textContent = "Exactly. It is you ❤️";
+      createHearts(14);
+    }else{
+      quizResult.textContent = "Wrong 😂 It is still you ❤️";
+      createHearts(10);
+    }
+  });
+});
+
+document.addEventListener("keydown", (event) => {
+  if(event.key === "Enter"){
+    startVideo();
+    if(currentScreen === 0){
+      showScreen(1);
+    }
+  }
+
+  if(event.key === "ArrowRight" || event.key === " "){
+    showScreen(currentScreen + 1);
+  }
+
+  if(event.key === "ArrowLeft"){
+    showScreen(currentScreen - 1);
+  }
+});
+
+let touchStartX = 0;
+
+document.addEventListener("touchstart", (event) => {
+  touchStartX = event.changedTouches[0].clientX;
+});
+
+document.addEventListener("touchend", (event) => {
+  const touchEndX = event.changedTouches[0].clientX;
+  const difference = touchEndX - touchStartX;
+
+  if(Math.abs(difference) > 55){
+    if(difference < 0){
+      showScreen(currentScreen + 1);
+    }else{
+      showScreen(currentScreen - 1);
+    }
+  }
+});
+
+showScreen(0);
+</script>
+
+</body>
+</html>
