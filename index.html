@@ -1098,6 +1098,227 @@ h2{
   }
 }
 
+/* =====================================================
+   GLOBAL FIX — ΟΛΑ ΤΑ PANELS ΝΑ ΧΩΡΑΝΕ ΤΟ ΠΕΡΙΕΧΟΜΕΝΟ
+===================================================== */
+
+.screen{
+  align-items:center;
+  overflow:hidden;
+}
+
+/* Πιο στενό panel και εσωτερικό scroll */
+.panel{
+  width:min(1180px,90vw) !important;
+  height:min(820px,88vh) !important;
+
+  overflow-y:auto !important;
+  overflow-x:hidden !important;
+
+  padding-bottom:120px !important;
+
+  scrollbar-width:thin;
+  scrollbar-color:rgba(255,255,255,.35) transparent;
+
+  overscroll-behavior:contain;
+  scroll-behavior:smooth;
+  scrollbar-gutter:stable;
+}
+
+/* Όμορφο μικρό scrollbar */
+.panel::-webkit-scrollbar{
+  width:7px;
+}
+
+.panel::-webkit-scrollbar-track{
+  background:transparent;
+  margin-top:35px;
+  margin-bottom:35px;
+}
+
+.panel::-webkit-scrollbar-thumb{
+  background:linear-gradient(
+    var(--purple2),
+    var(--blue2),
+    var(--brown2)
+  );
+
+  border-radius:999px;
+}
+
+.panel::-webkit-scrollbar-thumb:hover{
+  background:rgba(255,255,255,.6);
+}
+
+/* Τα layouts να ξεκινούν κανονικά από πάνω */
+.singleMemory,
+.travelLayout,
+.funLayout{
+  height:auto !important;
+  min-height:100%;
+  align-items:center;
+}
+
+/* Οι δύο φωτογραφίες να μην κόβονται */
+.twoPhotos{
+  align-items:start;
+  height:auto !important;
+}
+
+.photoCard{
+  min-height:560px !important;
+  height:560px !important;
+}
+
+/* Η gallery να χωράει και να επιτρέπει scroll */
+.galleryStage{
+  height:auto !important;
+  min-height:100%;
+  justify-content:flex-start !important;
+}
+
+.galleryStrip{
+  height:580px !important;
+  min-height:580px;
+  flex-shrink:0;
+}
+
+/* Οι φωτογραφίες μίας σελίδας */
+.memoryPhotoWrap{
+  min-height:620px !important;
+  height:620px;
+}
+
+/* Travel φωτογραφίες */
+.travelStack{
+  height:650px !important;
+  min-height:650px;
+}
+
+/* Funny section */
+.funCard{
+  min-height:340px !important;
+}
+
+.funCard.wide{
+  min-height:280px !important;
+}
+
+/* Screenshots με σχόλια */
+.commentWall{
+  height:auto !important;
+  min-height:600px;
+  align-items:start;
+  padding-top:25px;
+  padding-bottom:30px;
+}
+
+.commentShot{
+  height:580px !important;
+}
+
+/* Το navigation να μην καλύπτει τις φωτογραφίες */
+.controls{
+  bottom:12px !important;
+}
+@media(max-width:800px){
+
+  .screen{
+    padding:10px !important;
+  }
+
+  .panel{
+    width:95vw !important;
+    height:84vh !important;
+    padding:22px 18px 110px !important;
+    border-radius:28px;
+  }
+
+  .singleMemory,
+  .travelLayout,
+  .funLayout{
+    display:flex !important;
+    flex-direction:column;
+    align-items:stretch;
+    gap:20px;
+  }
+
+  .memoryPhotoWrap{
+    width:100%;
+    min-height:440px !important;
+    height:440px !important;
+    flex-shrink:0;
+  }
+
+  .twoPhotos{
+    display:flex !important;
+    flex-direction:column;
+  }
+
+  .photoCard{
+    width:100%;
+    min-height:430px !important;
+    height:430px !important;
+    flex-shrink:0;
+  }
+
+  .galleryStrip{
+    display:grid !important;
+    grid-template-columns:1fr 1fr;
+    height:auto !important;
+    min-height:0;
+    overflow:visible;
+  }
+
+  .galleryItem{
+    width:100%;
+    height:330px;
+    min-width:0 !important;
+  }
+
+  .travelStack{
+    width:100%;
+    height:520px !important;
+    min-height:520px;
+    flex-shrink:0;
+  }
+
+  .funCards{
+    width:100%;
+  }
+
+  .funCard{
+    min-height:250px !important;
+  }
+
+  .funCard.wide{
+    min-height:220px !important;
+  }
+
+  .commentWall{
+    display:flex !important;
+    overflow-x:auto !important;
+    overflow-y:hidden;
+    min-height:520px;
+    padding:20px 5px 35px;
+    scroll-snap-type:x mandatory;
+  }
+
+  .commentShot{
+    min-width:78%;
+    height:500px !important;
+    flex-shrink:0;
+    scroll-snap-align:center;
+  }
+
+  h1{
+    font-size:clamp(2.4rem,12vw,4rem) !important;
+  }
+
+  h2{
+    font-size:clamp(1.8rem,8vw,3rem) !important;
+  }
+}
 </style>
 </head>
 <body>
@@ -1450,23 +1671,23 @@ h2{
 
       <div class="commentWall">
         <div class="commentShot" style="--r:-5deg;">
-          <img src="IMG_2626.jpeg" alt="">
+          <img src="73723C0F-DFAF-4433-90F3-B3D43773B7FA" alt="">
         </div>
 
         <div class="commentShot" style="--r:4deg;">
-          <img src="IMG_2625.jpeg" alt="">
+          <img src="73723C0F-DFAF-4433-90F3-B3D43773B7FA" alt="">
         </div>
 
         <div class="commentShot" style="--r:-2deg;">
-          <img src="IMG_2624.jpeg" alt="">
+          <img src="736260556_1310995760800680_846379515595356384_n" alt="">
         </div>
 
         <div class="commentShot" style="--r:5deg;">
-          <img src="IMG_2622.jpeg" alt="">
+          <img src="738472700_28153022357615820_864634999217654805_n" alt="">
         </div>
 
         <div class="commentShot" style="--r:-4deg;">
-          <img src="IMG_2623.jpeg" alt="">
+          <img src="740711998_28020358334248752_8334059859582005943_n" alt="">
         </div>
       </div>
     </div>
