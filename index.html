@@ -873,22 +873,31 @@ h2{
 ========================= */
 
 .commentWall{
-  height:100%;
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:14px;
-  align-items:center;
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:28px;
+
+    margin-top:35px;
+    flex-wrap:wrap;
 }
 
 .commentShot{
-  position:relative;
-  height:560px;
-  overflow:hidden;
-  border-radius:28px;
-  border:1px solid rgba(255,255,255,.25);
-  box-shadow:0 22px 70px rgba(0,0,0,.3);
-  transform:rotate(var(--r));
-  transition:.45s ease;
+    width:250px;
+    height:420px;
+
+    border-radius:28px;
+    overflow:hidden;
+
+    flex:0 0 auto;
+}
+.commentShot img{
+    width:100%;
+    height:100%;
+    object-fit:contain;   /* ή cover αν τις θέλεις να γεμίζουν */
+    border-radius:28px;
 }
 
 .commentShot:hover{
@@ -1670,26 +1679,26 @@ h2{
       </p>
 
       <div class="commentWall">
-        <div class="commentShot" style="--r:-5deg;">
-          <img src="73723C0F-DFAF-4433-90F3-B3D43773B7FA" alt="">
-        </div>
 
-        <div class="commentShot" style="--r:4deg;">
-          <img src="73723C0F-DFAF-4433-90F3-B3D43773B7FA" alt="">
-        </div>
+  <div class="commentShot">
+    <img
+      src="73723C0F-DFAF-4433-90F3-B3D43773B7FA.jpeg"
+      alt="Memory comment 1">
+  </div>
 
-        <div class="commentShot" style="--r:-2deg;">
-          <img src="736260556_1310995760800680_846379515595356384_n" alt="">
-        </div>
+  <div class="commentShot">
+    <img
+      src="738472700_28153022357615820_864634999217654805_n.jpg"
+      alt="Memory comment 4">
+  </div>
 
-        <div class="commentShot" style="--r:5deg;">
-          <img src="738472700_28153022357615820_864634999217654805_n" alt="">
-        </div>
+  <div class="commentShot">
+    <img
+      src="740711998_28020358334248752_8334059859582005943_n.jpg"
+      alt="Memory comment 5">
+  </div>
 
-        <div class="commentShot" style="--r:-4deg;">
-          <img src="740711998_28020358334248752_8334059859582005943_n" alt="">
-        </div>
-      </div>
+</div>
     </div>
   </section>
     <!-- LOVE LETTER -->
